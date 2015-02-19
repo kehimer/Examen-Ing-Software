@@ -1,0 +1,7 @@
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\bin\Debug\Domino.Spec.dll.config
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\bin\Debug\Domino.Spec.dll
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\bin\Debug\Domino.Spec.pdb
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.csprojResolveAssemblyReference.cache
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.dll
+C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.pdb

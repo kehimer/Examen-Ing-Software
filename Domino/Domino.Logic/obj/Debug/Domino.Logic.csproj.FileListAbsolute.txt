@@ -1,0 +1,9 @@
+c:\Users\clopez\documents\visual studio 2013\Projects\Domino\Domino.Logic\bin\Debug\Domino.Logic.dll
+c:\Users\clopez\documents\visual studio 2013\Projects\Domino\Domino.Logic\bin\Debug\Domino.Logic.pdb
+c:\Users\clopez\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.csprojResolveAssemblyReference.cache
+c:\Users\clopez\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
+c:\Users\clopez\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb
+D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\bin\Debug\Domino.Logic.dll
+D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\bin\Debug\Domino.Logic.pdb
+D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
+D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb
