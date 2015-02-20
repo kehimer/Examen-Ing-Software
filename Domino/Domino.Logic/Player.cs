@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Domino.Logic
 {
     public class Player
     {
-        private List<Piece> _pieces;
+        private readonly List<Tile> _tiles;
         private int _number;
 
         public Player()
         {
-            _pieces = new List<Piece>();
+            _tiles = new List<Tile>();
             _number = 0;
         }
 
@@ -27,29 +25,29 @@ namespace Domino.Logic
             return _number;
         }
 
-        public void AddPiece(Piece newPiece)
+        public void AddTile(Tile newTile)
         {
-            _pieces.Add(newPiece);
+            _tiles.Add(newTile);
         }
 
-        public List<Piece> GetPieces()
+        public List<Tile> GetTiles()
         {
-            return _pieces;
+            return _tiles;
         }
 
-        public bool HasPiece(int face1, int face2)
+        public bool HasThisTile(int side1, int side2)
         {
-            return _pieces.Any(piece => piece.FaceOne.Equals(face1) && piece.FaceTwo.Equals(face2));
+            return _tiles.Any(tile => tile.SideOne.Equals(side1) && tile.SideTwo.Equals(side2));
         }
 
-        public Piece GetPiece(int face1, int face2)
+        public Tile GetTile(int side1, int side2)
         {
-            return _pieces.First(x => x.FaceOne.Equals(face1) && x.FaceTwo.Equals(face2));
+            return _tiles.First(tile => tile.SideOne.Equals(side1) && tile.SideTwo.Equals(side2));
         }
 
-        public void RemovePiece(int face1, int face2)
+        public void RemoveTile(int face1, int face2)
         {
-            _pieces.Remove(GetPiece(face1, face2));
+            _tiles.Remove(GetTile(face1, face2));
         }
     }
 }

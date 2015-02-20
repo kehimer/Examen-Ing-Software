@@ -20,11 +20,11 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             
-            mockWellRepository.SetInitialPieces();
-            var originalStackPiece = mockWellRepository.GetPieces();
+            mockWellRepository.SetInitialTiles();
+            var originalStackPiece = mockWellRepository.GetTiles();
 
             mockWellRepository.SetRandomOrder(Environment.TickCount);
-            var randomStackPiece = mockWellRepository.GetPieces();
+            var randomStackPiece = mockWellRepository.GetTiles();
 
             CollectionAssert.AreNotEqual(originalStackPiece, randomStackPiece, "Las piezas del Pozo deben estar DESORDENADAS");
         }
@@ -35,15 +35,15 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var player = 1;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(player);
-            var piecesPlayer1 = domino.GetPiecesPlayer(player);
-            var wellPieces = domino.GetPiecesFromWell();
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(player);
+            var piecesPlayer1 = domino.GetPlayerTiles(player);
+            var wellPieces = domino.GetTilesFromTheStack();
 
             CollectionAssert.AreNotEqual(piecesPlayer1, wellPieces, "Las piezas del Pozo NO deben ser las mismas que tiene asignada el jugador1");
         }
@@ -55,16 +55,16 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            var piecesPlayer1 = domino.GetPiecesPlayer(1);
-            var piecesPlayer2 = domino.GetPiecesPlayer(2);
+            var piecesPlayer1 = domino.GetPlayerTiles(1);
+            var piecesPlayer2 = domino.GetPlayerTiles(2);
 
 
             CollectionAssert.AreNotEqual(piecesPlayer1, piecesPlayer2, "Las piezas de cada jugador deben ser distintas");
@@ -77,17 +77,17 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            var piecesPlayer1 = domino.GetPiecesPlayer(1);
-            var piecesPlayer2 = domino.GetPiecesPlayer(2);
-            var piecesPlayer3 = domino.GetPiecesPlayer(3);
+            var piecesPlayer1 = domino.GetPlayerTiles(1);
+            var piecesPlayer2 = domino.GetPlayerTiles(2);
+            var piecesPlayer3 = domino.GetPlayerTiles(3);
         }
 
 
@@ -97,15 +97,15 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            var wellPieces = domino.GetPiecesFromWell();
+            var wellPieces = domino.GetTilesFromTheStack();
             Assert.AreEqual(wellPieces.Count, 14, "Las piezas en el pozo deben ser 14");
         }
 
@@ -115,15 +115,15 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            var startedPlayer = domino.GetPlayerWithDoublePieceGreater();
+            var startedPlayer = domino.GetPlayerWithDoubleGreaterTile();
             const int numberPlayer = 2;
 
             Assert.AreEqual(numberPlayer, 2, "El jugador 2 debe iniciar porque tiene la pieza doble mayor");
@@ -135,15 +135,15 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            var startedPlayer = domino.GetPlayerWithSumPieceGreater();
+            var startedPlayer = domino.GetPlayerWithMaxSumTile();
             var numberPlayer = 1;
 
             Assert.AreEqual(numberPlayer, 1, "El jugador 1 debe iniciar porque tiene la pieza con suma de valores mayor");
@@ -155,21 +155,21 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var currentPlayer = domino.GetPlayerCurrentTurn();
-            var pieceToMove = currentPlayer.GetPieces()[3];
+            var pieceToMove = currentPlayer.GetTiles()[3];
 
-            var piecesBeforMove = currentPlayer.GetPieces().Count;
-            domino.CurrentPlayerMovePieceToBeginTable(pieceToMove);
-            var piecesAferMove = currentPlayer.GetPieces().Count;
+            var piecesBeforMove = currentPlayer.GetTiles().Count;
+            domino.MoveCurrentPlayerTileAtTheBeginingOfTheStack(pieceToMove);
+            var piecesAferMove = currentPlayer.GetTiles().Count;
 
             Assert.AreNotEqual(piecesBeforMove, piecesAferMove, "No deben haber las mismas piezas despues del movimiento");
         }
@@ -180,21 +180,21 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var currentPlayer = domino.GetPlayerCurrentTurn();
-            var pieceToMove = currentPlayer.GetPieces()[3];
+            var pieceToMove = currentPlayer.GetTiles()[3];
 
-            var piecesBeforMove = currentPlayer.GetPieces().Count;
-            domino.CurrentPlayerMovePieceToEndTable(pieceToMove);
-            var piecesAferMove = currentPlayer.GetPieces().Count;
+            var piecesBeforMove = currentPlayer.GetTiles().Count;
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(pieceToMove);
+            var piecesAferMove = currentPlayer.GetTiles().Count;
 
             Assert.AreNotEqual(piecesBeforMove, piecesAferMove, "No deben haber las mismas piezas despues del movimiento");
         }
@@ -206,21 +206,21 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var otherPlayer = domino.GetPlayer(2);
-            var pieceToMove = otherPlayer.GetPieces()[3];
+            var pieceToMove = otherPlayer.GetTiles()[3];
 
-            var piecesBeforMove = otherPlayer.GetPieces().Count;
-            domino.CurrentPlayerMovePieceToEndTable(pieceToMove);
-            var piecesAferMove = otherPlayer.GetPieces().Count;
+            var piecesBeforMove = otherPlayer.GetTiles().Count;
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(pieceToMove);
+            var piecesAferMove = otherPlayer.GetTiles().Count;
 
             Assert.AreNotEqual(piecesBeforMove, piecesAferMove, "No deben haber las mismas piezas despues del movimiento");
         }
@@ -231,19 +231,19 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(2);
+            domino.SetPlayerTurn(2);
             var currentPlayerBeforeMove = domino.GetPlayerCurrentTurn();
-            var pieceToMove = currentPlayerBeforeMove.GetPieces()[3];
-            domino.CurrentPlayerMovePieceToEndTable(pieceToMove);
-            domino.SetTurnPlayer(1);
+            var pieceToMove = currentPlayerBeforeMove.GetTiles()[3];
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(pieceToMove);
+            domino.SetPlayerTurn(1);
             var currentPlayerAfeterMove = domino.GetPlayerCurrentTurn();
 
             Assert.AreNotEqual(currentPlayerBeforeMove.GetNumber(), currentPlayerAfeterMove.GetNumber(), "Despues de un movimiento los turnos deben cambiar");
@@ -255,20 +255,20 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var currentPlayer = domino.GetPlayerCurrentTurn();
             
-            var piecesBeforMove = currentPlayer.GetPieces().Count;
-            domino.CurrentPlayerTakePieceFromWell();
-            var piecesAferMove = currentPlayer.GetPieces().Count;
+            var piecesBeforMove = currentPlayer.GetTiles().Count;
+            domino.TakeATileFromTheStack();
+            var piecesAferMove = currentPlayer.GetTiles().Count;
             
 
             Assert.AreNotEqual(piecesBeforMove, piecesAferMove, "No deben haber las mismas piezas despues del movimiento");
@@ -281,20 +281,20 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var currentPlayer = domino.GetPlayerCurrentTurn();
-            domino.GetPiecesFromWell().Clear();
-            var piecesBeforMove = currentPlayer.GetPieces().Count;
-            domino.CurrentPlayerTakePieceFromWell();
-            var piecesAferMove = currentPlayer.GetPieces().Count;
+            domino.GetTilesFromTheStack().Clear();
+            var piecesBeforMove = currentPlayer.GetTiles().Count;
+            domino.TakeATileFromTheStack();
+            var piecesAferMove = currentPlayer.GetTiles().Count;
 
 
             Assert.AreNotEqual(piecesBeforMove, piecesAferMove, "No deben haber las mismas piezas despues del movimiento");
@@ -306,22 +306,22 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(1);
+            domino.SetPlayerTurn(1);
             var currentPlayer = domino.GetPlayerCurrentTurn();
 
-            domino.GetPiecesFromWell().Clear();
-            domino.CurrentPlayerMovePieceToEndTable(currentPlayer.GetPieces()[3]);
-            domino.CurrentPlayerMovePieceToEndTable(currentPlayer.GetPieces()[2]);
+            domino.GetTilesFromTheStack().Clear();
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(currentPlayer.GetTiles()[3]);
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(currentPlayer.GetTiles()[2]);
 
-            var numberPlay = domino.GetPlayNumberWin();
+            var numberPlay = domino.GetWinnerPlayer();
 
             Assert.AreEqual(numberPlay, 1, "El jugador 1 debio ganar el Juego");
         }
@@ -332,22 +332,22 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
-            domino.SetTurnPlayer(2);
+            domino.SetPlayerTurn(2);
             var currentPlayer = domino.GetPlayerCurrentTurn();
 
-            domino.GetPiecesFromWell().Clear();
-            domino.CurrentPlayerMovePieceToEndTable(currentPlayer.GetPieces()[3]);
-            domino.CurrentPlayerMovePieceToEndTable(currentPlayer.GetPieces()[2]);
+            domino.GetTilesFromTheStack().Clear();
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(currentPlayer.GetTiles()[3]);
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(currentPlayer.GetTiles()[2]);
 
-            var numberPlay = domino.GetPlayNumberWin();
+            var numberPlay = domino.GetWinnerPlayer();
 
             Assert.AreEqual(numberPlay, 2, "El jugador 2 debio ganar el Juego");
         }
@@ -358,17 +358,17 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
             
-            domino.GetPiecesFromWell().Clear();
-            var numberPlay = domino.GetPlayNumberWin();
+            domino.GetTilesFromTheStack().Clear();
+            var numberPlay = domino.GetWinnerPlayer();
 
             Assert.AreEqual(numberPlay, -1, "Los jugadores debieron empatar el partido");
         }
@@ -379,23 +379,23 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.Domino(mockDominoRepository, mockWellRepository);
+            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
-            domino.InitialWell();
-            domino.SetRandomOrderPiecesWell(seed);
-            domino.SetPiecesPlayers(players);
+            domino.InitializeStack();
+            domino.SetRandomOrderStackTiles(seed);
+            domino.SetPlayersTiles(players);
 
 
-            domino.GetPiecesFromWell().Clear();
-            domino.SetTurnPlayer(1);
+            domino.GetTilesFromTheStack().Clear();
+            domino.SetPlayerTurn(1);
 
             var currentPlayer = domino.GetPlayerCurrentTurn();
-            domino.CurrentPlayerMovePieceToEndTable(currentPlayer.GetPieces()[4]);
+            domino.MoveCurrentPlayerTileAtTheEndOfTheStack(currentPlayer.GetTiles()[4]);
 
-            var numberPlay = domino.GetPlayNumberWin();
-            domino.SaveStadisticGame();
+            var numberPlay = domino.GetWinnerPlayer();
+            domino.SaveGameStatistics();
 
 
             Assert.AreNotEqual(numberPlay, -1, "Un jugador debio ganar el partido");

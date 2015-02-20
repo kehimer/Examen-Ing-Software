@@ -9,20 +9,20 @@ namespace Domino.Test.Mocks
 {
     public class PlayerRepositoryMockAsignPieces : IPlayerRepository
     {
-        private List<Piece> _pieces = new List<Piece>();
-        public void AddPiece(Piece newPiece)
+        private List<Tile> _pieces = new List<Tile>();
+        public void AddTile(Tile newTile)
         {
-            _pieces.Add(newPiece);
+            _pieces.Add(newTile);
         }
 
-        public List<Piece> GetPieces()
+        public List<Tile> GetTiles()
         {
             return _pieces;
         }
 
-        public bool HasPiece(int face1, int face2)
+        public bool HasThisTile(int side1, int side2)
         {
-            return _pieces.Any(piece => piece.FaceOne.Equals(face1) && piece.FaceTwo.Equals(face2));
+            return _pieces.Any(piece => piece.SideOne.Equals(side1) && piece.SideTwo.Equals(side2));
         }
     }
 }

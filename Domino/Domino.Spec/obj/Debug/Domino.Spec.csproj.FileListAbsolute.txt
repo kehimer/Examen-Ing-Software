@@ -5,3 +5,9 @@ C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\bin\Debug\TechTalk
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.dll
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Spec\obj\Debug\Domino.Spec.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\bin\Debug\Domino.Spec.dll.config
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\bin\Debug\Domino.Spec.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\bin\Debug\Domino.Spec.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\obj\Debug\Domino.Spec.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\obj\Debug\Domino.Spec.pdb

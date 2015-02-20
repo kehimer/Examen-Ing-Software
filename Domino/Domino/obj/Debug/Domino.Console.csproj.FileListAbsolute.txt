@@ -34,3 +34,16 @@ C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino\bin\Debug\nunit.framewo
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino\obj\Debug\Domino.Console.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino\obj\Debug\Domino.exe
 C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino\obj\Debug\Domino.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Domino.exe.config
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Domino.exe
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Domino.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Autofac.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Domino.Logic.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\nunit.framework.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Domino.Logic.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\Autofac.xml
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\bin\Debug\nunit.framework.xml
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\obj\Debug\Domino.Console.csprojResolveAssemblyReference.cache
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\obj\Debug\Domino.exe
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino\obj\Debug\Domino.pdb

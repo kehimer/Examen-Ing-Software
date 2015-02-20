@@ -9,40 +9,40 @@ using Domino.Logic;
 
 namespace Domino.Test.Mocks
 {
-    public class DominoRepositoryMockGame : IDominoRepository
+    public class DominoRepositoryMockGame : IDominoGameRepository
     {
         private List<Player> _players = new List<Player>();
-        private List<Piece> _pieces =  new List<Piece>();
-        private List<Piece> _piecesTable = new List<Piece>();
-        public IWellRepository WellRepository { get; set; }
+        private List<Tile> _pieces =  new List<Tile>();
+        private List<Tile> _piecesTable = new List<Tile>();
+        public ITileRepository TileRepository { get; set; }
         
         private const int CantPiecesByPlayer = 7;
 
         private int _currentPlayerTurn = 1;
         
-        public void SetPiecesPlayers(int players)
+        public void SetPlayerTile(int players)
         {
-            var wellPieces = WellRepository.GetPieces();
+            var wellPieces = TileRepository.GetTiles();
 
             for (int contador = 1; contador <= players; contador++)
             {
                 var newPlayer = new Player();
                 for (int i = 0; i < CantPiecesByPlayer; i++)
                 {
-                    newPlayer.AddPiece(wellPieces.Pop());
+                    newPlayer.AddTile(wellPieces.Pop());
                 }
                 newPlayer.SetNumber(contador);
                 _players.Add(newPlayer);
             }
         }
 
-        public List<Piece> GetPiecesPlayer(int playerNumber)
+        public List<Tile> GetPlayerTiles(int playerNumber)
         {
             var player = _players.First(x => x.GetNumber().Equals(playerNumber));
             if(player == null)
                 throw new Exception(string.Format("El jugador {0} no existe", playerNumber));
 
-            return player.GetPieces();
+            return player.GetTiles();
         }
 
         public List<Player> GetPlayers()
@@ -59,30 +59,30 @@ namespace Domino.Test.Mocks
             return player;
         }
 
-        public Piece GetDoublePieceGreater(int playerNumber)
+        public Tile GetDoubleGreaterTile(int playerNumber)
         {
             var player = GetPlayer(playerNumber);
             for (int i = 6; i >= 0; i--)
             {
-                if (player.HasPiece(i, i))
-                    return player.GetPiece(i, i);
+                if (player.HasThisTile(i, i))
+                    return player.GetTile(i, i);
             }
             return null;
         }
 
-        public Player GetPlayerWithDoublePieceGreater()
+        public Player GetPlayerWithDoubleGreaterTile()
         {
-            var greaterPiece = new Piece {FaceOne = -1, FaceTwo = -1};
+            var greaterPiece = new Tile {SideOne = -1, SideTwo = -1};
             var tempPlayer = new Player();
             tempPlayer.SetNumber(-1);
 
             foreach (var player in _players)
             {
-                var tempPiece = GetDoublePieceGreater(player.GetNumber());
+                var tempPiece = GetDoubleGreaterTile(player.GetNumber());
                 if(tempPiece == null)
                     continue;
 
-                if (tempPiece.FaceOne > greaterPiece.FaceOne)
+                if (tempPiece.SideOne > greaterPiece.SideOne)
                 {
                     greaterPiece = tempPiece;
                     tempPlayer = player;
@@ -92,10 +92,10 @@ namespace Domino.Test.Mocks
             return tempPlayer.GetNumber() == -1 ? null : tempPlayer;
         }
 
-        public Player GetPlayerWithSumPieceGreater()
+        public Player GetPlayerWithMaxSumTile()
         {
-            var maxValue = _players.Max(x => x.GetPieces().Sum(p => p.FaceOne + p.FaceTwo));
-            return _players.First(x => x.GetPieces().Sum(p => p.FaceOne + p.FaceTwo).Equals(maxValue));
+            var maxValue = _players.Max(x => x.GetTiles().Sum(p => p.SideOne + p.SideTwo));
+            return _players.First(x => x.GetTiles().Sum(p => p.SideOne + p.SideTwo).Equals(maxValue));
         }
 
         public Player GetPlayerCurrentTurn()
@@ -103,46 +103,46 @@ namespace Domino.Test.Mocks
             return GetPlayer(_currentPlayerTurn);
         }
 
-        public void CurrentPlayerMovePieceToBeginTable(Piece piece)
+        public void SetTileAtTheBeginingOfTheStack(Tile tile)
         {
             var currentPlayer = GetPlayerCurrentTurn();
             
-            if(!currentPlayer.HasPiece(piece.FaceOne, piece.FaceTwo))
+            if(!currentPlayer.HasThisTile(tile.SideOne, tile.SideTwo))
                 throw new Exception("El jugador de turno no tiene la pieza que desea mover");
 
-            _piecesTable.Insert(0, piece);
-            currentPlayer.RemovePiece(piece.FaceOne, piece.FaceTwo);
+            _piecesTable.Insert(0, tile);
+            currentPlayer.RemoveTile(tile.SideOne, tile.SideTwo);
         }
 
-        public void CurrentPlayerMovePieceToEndTable(Piece piece)
+        public void SetTileAtTheEndOfTheStack(Tile tile)
         {
             var currentPlayer = GetPlayerCurrentTurn();
 
-            if (!currentPlayer.HasPiece(piece.FaceOne, piece.FaceTwo))
+            if (!currentPlayer.HasThisTile(tile.SideOne, tile.SideTwo))
                 throw new Exception("El jugador de turno no tiene la pieza que desea mover");
 
-            _piecesTable.Add(piece);
-            currentPlayer.RemovePiece(piece.FaceOne, piece.FaceTwo);
+            _piecesTable.Add(tile);
+            currentPlayer.RemoveTile(tile.SideOne, tile.SideTwo);
         }
 
-        public void SetTurnPlayer(int playerNumber)
+        public void SetPlayerTurn(int numberPlayer)
         {
-            _currentPlayerTurn = playerNumber;
+            _currentPlayerTurn = numberPlayer;
         }
 
-        public void CurrentPlayerTakePieceFromWell()
+        public void TakeATileFromTheStack()
         {
-            if (WellRepository.GetPieces().Count == 0)
+            if (TileRepository.GetTiles().Count == 0)
                 throw new Exception("Ya no hay piezas en el pozo");
 
             var currentPlayer = GetPlayerCurrentTurn();
-            currentPlayer.AddPiece(WellRepository.GetPieces().Pop());
+            currentPlayer.AddTile(TileRepository.GetTiles().Pop());
         }
 
-        public int GetPlayNumberWin()
+        public int GetWinnerPlayer()
         {
-            var minPieces = _players.Min(x => x.GetPieces().Count);
-            var playersWithMinPieces = _players.Where(x => x.GetPieces().Count.Equals(minPieces)).ToList();
+            var minPieces = _players.Min(x => x.GetTiles().Count);
+            var playersWithMinPieces = _players.Where(x => x.GetTiles().Count.Equals(minPieces)).ToList();
 
             if (playersWithMinPieces.Count() > 1)
                 return -1;
@@ -150,9 +150,9 @@ namespace Domino.Test.Mocks
             return playersWithMinPieces.First().GetNumber();
         }
 
-        public void SaveStadisticGame()
+        public void SaveGameStatistics()
         {
-            var numberPlayerWin = GetPlayNumberWin();
+            var numberPlayerWin = GetWinnerPlayer();
             if(numberPlayerWin.Equals(-1))
                 return;
 

@@ -1,0 +1,10 @@
+C:\Users\Josselyn\Desktop\Domino\Domino.Interfaces\bin\Debug\Domino.Interfaces.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Interfaces\bin\Debug\Domino.Interfaces.pdb
+C:\Users\Josselyn\Desktop\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Josselyn\Desktop\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Interfaces\bin\Debug\Domino.Interfaces.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Interfaces\bin\Debug\Domino.Interfaces.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Interfaces\obj\Debug\Domino.Interfaces.pdb

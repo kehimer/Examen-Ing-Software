@@ -17,13 +17,23 @@ D:\UNITEC\Analisi Sistemas II\Domino\Domino.Test\bin\Debug\Rhino.Mocks.xml
 D:\UNITEC\Analisi Sistemas II\Domino\Domino.Test\obj\Debug\Domino.Test.csprojResolveAssemblyReference.cache
 D:\UNITEC\Analisi Sistemas II\Domino\Domino.Test\obj\Debug\Domino.Test.dll
 D:\UNITEC\Analisi Sistemas II\Domino\Domino.Test\obj\Debug\Domino.Test.pdb
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\WebTest1.webtest
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Domino.Test.dll
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Domino.Test.pdb
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Domino.Logic.dll
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Rhino.Mocks.dll
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Domino.Logic.pdb
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\bin\Debug\Rhino.Mocks.xml
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\obj\Debug\Domino.Test.csprojResolveAssemblyReference.cache
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\obj\Debug\Domino.Test.dll
-C:\Users\kingdomkaz\Documents\test de Spec\Domino\Domino.Test\obj\Debug\Domino.Test.pdb
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\WebTest1.webtest
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Domino.Test.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Domino.Test.pdb
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Domino.Logic.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Rhino.Mocks.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Domino.Logic.pdb
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\bin\Debug\Rhino.Mocks.xml
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\obj\Debug\Domino.Test.csprojResolveAssemblyReference.cache
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\obj\Debug\Domino.Test.dll
+C:\Users\Josselyn\Desktop\Domino\Domino.Test\obj\Debug\Domino.Test.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\WebTest1.webtest
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Domino.Test.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Domino.Test.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Domino.Logic.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Rhino.Mocks.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Domino.Logic.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\bin\Debug\Rhino.Mocks.xml
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\obj\Debug\Domino.Test.csprojResolveAssemblyReference.cache
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\obj\Debug\Domino.Test.dll
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Test\obj\Debug\Domino.Test.pdb

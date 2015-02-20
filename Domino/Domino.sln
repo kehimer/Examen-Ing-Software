@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Console", "Domino\Domino.Console.csproj", "{9E6C3A0D-6EFA-4797-93E6-A1E2A8FFBC5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Logic", "Domino.Logic\Domino.Logic.csproj", "{39909804-D43C-4C65-82A0-D6E92531690E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Test", "Domino.Test\Domino.Test.csproj", "{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Spec", "Domino.Spec\Domino.Spec.csproj", "{952AA358-991A-4DE6-A63F-C069950FC3FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Interfaces", "Domino.Interfaces\Domino.Interfaces.csproj", "{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Test", "Domino.Test\Domino.Test.csproj", "{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +27,18 @@ Global
 		{39909804-D43C-4C65-82A0-D6E92531690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39909804-D43C-4C65-82A0-D6E92531690E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39909804-D43C-4C65-82A0-D6E92531690E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
