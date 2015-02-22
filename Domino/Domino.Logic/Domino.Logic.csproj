@@ -39,15 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DominoGame.cs" />
-    <Compile Include="DominoStack.cs" />
-    <Compile Include="IDominoGameRepository.cs" />
-    <Compile Include="IPlayerRepository.cs" />
-    <Compile Include="ITileRepository.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Implement\DominoGame.cs" />
+    <Compile Include="Implement\DominoStack.cs" />
+    <Compile Include="Implement\Player.cs" />
+    <Compile Include="Implement\Tile.cs" />
+    <Compile Include="Interfaces\IDominoGameRepository.cs" />
+    <Compile Include="Interfaces\IPlayerRepository.cs" />
+    <Compile Include="Interfaces\ITileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tile.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Domino.Logic.Interfaces;
 
-namespace Domino.Logic
+namespace Domino.Logic.Implement
 {
     public class DominoGame
     {

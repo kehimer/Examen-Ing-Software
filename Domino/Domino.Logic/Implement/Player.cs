@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-
-namespace Domino.Logic
+namespace Domino.Logic.Implement
 {
     public class Player
     {

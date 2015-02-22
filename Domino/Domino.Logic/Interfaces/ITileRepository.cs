@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Domino.Logic.Implement;
 
-namespace Domino.Logic
+namespace Domino.Logic.Interfaces
 {
     public interface ITileRepository
     {

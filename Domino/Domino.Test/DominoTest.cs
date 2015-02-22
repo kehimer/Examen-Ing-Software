@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domino.Logic;
+using Domino.Logic.Implement;
 using Domino.Test.Mocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Rhino.Mocks;
@@ -35,7 +36,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var player = 1;
 
@@ -55,7 +56,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -77,7 +78,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -97,7 +98,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -115,7 +116,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -135,7 +136,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -155,7 +156,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -180,7 +181,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -206,7 +207,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -231,7 +232,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -255,7 +256,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -281,7 +282,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -306,7 +307,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -332,7 +333,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -358,7 +359,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
@@ -379,7 +380,7 @@ namespace Domino.Test
             var seed = Environment.TickCount;
             var mockWellRepository = new WellRepositoryMockSortRandom();
             var mockDominoRepository = new DominoRepositoryMockGame();
-            var domino = new Logic.DominoGame(mockDominoRepository, mockWellRepository);
+            var domino = new DominoGame(mockDominoRepository, mockWellRepository);
 
             var players = 2;
 
