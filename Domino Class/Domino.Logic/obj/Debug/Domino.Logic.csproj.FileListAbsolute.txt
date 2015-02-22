@@ -1,0 +1,10 @@
+C:\Users\Tornrhen\documents\visual studio 2013\Projects\Domino\Domino.Logic\bin\Debug\Domino.Logic.dll
+C:\Users\Tornrhen\documents\visual studio 2013\Projects\Domino\Domino.Logic\bin\Debug\Domino.Logic.pdb
+C:\Users\Tornrhen\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Tornrhen\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
+C:\Users\Tornrhen\documents\visual studio 2013\Projects\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb
+C:\Users\Tornrhen\Documents\GitHub\Domino\Domino\Domino.Logic\bin\Debug\Domino.Logic.dll
+C:\Users\Tornrhen\Documents\GitHub\Domino\Domino\Domino.Logic\bin\Debug\Domino.Logic.pdb
+C:\Users\Tornrhen\Documents\GitHub\Domino\Domino\Domino.Logic\obj\Debug\Domino.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Tornrhen\Documents\GitHub\Domino\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
+C:\Users\Tornrhen\Documents\GitHub\Domino\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb
