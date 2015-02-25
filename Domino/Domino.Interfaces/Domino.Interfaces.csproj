@@ -44,7 +44,7 @@
   <ItemGroup>
     <Folder Include="DominoGame\" />
     <Folder Include="Player\" />
-    <Folder Include="Stack\" />
+    <Folder Include="Tile\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domino.Logic\Domino.Logic.csproj">

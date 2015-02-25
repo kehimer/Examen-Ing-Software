@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domino.Logic;
+using Domino.Logic.Implement;
 using Domino.Test.Factories;
 using Rhino.Mocks.Constraints;
 

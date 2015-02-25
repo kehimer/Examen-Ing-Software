@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Logic", "Domino.Logi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Spec", "Domino.Spec\Domino.Spec.csproj", "{952AA358-991A-4DE6-A63F-C069950FC3FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Interfaces", "Domino.Interfaces\Domino.Interfaces.csproj", "{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domino.Test", "Domino.Test\Domino.Test.csproj", "{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952AA358-991A-4DE6-A63F-C069950FC3FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79973B02-9DB1-4D46-8E5B-0E4E563DDF4D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74ADFE54-12D4-4FC7-AD82-085F65F9AB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU

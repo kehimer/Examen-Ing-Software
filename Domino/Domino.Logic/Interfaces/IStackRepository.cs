@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Domino.Logic.Implement;
+using Domino.Logic.Logic;
 
 namespace Domino.Logic.Interfaces
 {
-    public interface ITileRepository
+    public interface IStackRepository
     {
         void SetInitialTiles();
         Stack<Tile> GetTiles();

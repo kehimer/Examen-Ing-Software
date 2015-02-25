@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39909804-D43C-4C65-82A0-D6E92531690E}</ProjectGuid>
+    <ProjectGuid>{05323F45-254E-408D-976D-08208FFBD433}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Domino.Logic</RootNamespace>
-    <AssemblyName>Domino.Logic</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>Domino.Implements</RootNamespace>
+    <AssemblyName>Domino.Implements</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,19 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implements\DominoGameRepository.cs" />
-    <Compile Include="Implements\PlayerRepository.cs" />
-    <Compile Include="Implements\StackRepository.cs" />
-    <Compile Include="Logic\DominoGame.cs" />
-    <Compile Include="Logic\DominoStack.cs" />
-    <Compile Include="Logic\Player.cs" />
-    <Compile Include="Logic\Tile.cs" />
-    <Compile Include="Interfaces\IDominoGameRepository.cs" />
-    <Compile Include="Interfaces\IPlayerRepository.cs" />
-    <Compile Include="Interfaces\IStackRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Domino.Logic.Interfaces;
 
-namespace Domino.Logic.Implement
+namespace Domino.Logic.Logic
 {
     public class DominoStack
     {
-        private readonly ITileRepository _stackRepository;
+       /* private readonly IStackRepository _stackRepository;
         private Stack<Tile> _tilesStack;
 
-        public DominoStack(ITileRepository stackRepository)
+        public DominoStack(IStackRepository stackRepository)
         {
             _stackRepository = stackRepository;
             _tilesStack = _stackRepository.GetTiles();
@@ -23,6 +23,6 @@ namespace Domino.Logic.Implement
         {
             _stackRepository.SetRandomOrder(seed);
             _tilesStack = _stackRepository.GetTiles();
-        }
+        }*/
     }
 }

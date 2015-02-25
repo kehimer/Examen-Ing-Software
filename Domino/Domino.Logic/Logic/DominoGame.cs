@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using Domino.Logic.Interfaces;
 
-namespace Domino.Logic.Implement
+namespace Domino.Logic.Logic
 {
     public class DominoGame
     {
-        private readonly IDominoGameRepository _dominoRepository;
+        /*private readonly IDominoGameRepository _dominoRepository;
 
-        public DominoGame(IDominoGameRepository dominoRepository, ITileRepository tileRepository)
+        public DominoGame(IDominoGameRepository dominoRepository, IStackRepository stackRepository)
         {
             _dominoRepository = dominoRepository;
-            _dominoRepository.TileRepository = tileRepository;
+            _dominoRepository.StackRepository = stackRepository;
         }
 
         public void SetPlayersTiles(int players)
@@ -31,17 +31,17 @@ namespace Domino.Logic.Implement
 
         public Stack<Tile> GetTilesFromTheStack()
         {
-            return _dominoRepository.TileRepository.GetTiles();
+            return _dominoRepository.StackRepository.GetTiles();
         }
 
         public void InitializeStack()
         {
-            _dominoRepository.TileRepository.SetInitialTiles();
+            _dominoRepository.StackRepository.SetInitialTiles();
         }
 
         public void SetRandomOrderStackTiles(int seed)
         {
-            _dominoRepository.TileRepository.SetRandomOrder(seed);
+            _dominoRepository.StackRepository.SetRandomOrder(seed);
         }
 
         public Tile GetDoubleGreaterTile(int playerNumber)
@@ -97,6 +97,6 @@ namespace Domino.Logic.Implement
         public void SaveGameStatistics()
         {
             _dominoRepository.SaveGameStatistics();
-        }
+        }*/
     }
 }

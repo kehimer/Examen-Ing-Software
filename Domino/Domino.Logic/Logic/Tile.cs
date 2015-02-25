@@ -1,5 +1,5 @@
 ﻿
-namespace Domino.Logic.Implement
+namespace Domino.Logic.Logic
 {
     public class Tile
     {
