@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domino.Logic;
-using Domino.Logic.Implement;
+using Domino.Logic.Interfaces;
+using Domino.Logic.Logic;
 
 namespace Domino.Test.Mocks
 {
@@ -24,6 +21,16 @@ namespace Domino.Test.Mocks
         public bool HasThisTile(int side1, int side2)
         {
             return _pieces.Any(piece => piece.SideOne.Equals(side1) && piece.SideTwo.Equals(side2));
+        }
+
+        public bool RemoveTile(Tile tile)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Tile GetTile(int side1, int side2)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

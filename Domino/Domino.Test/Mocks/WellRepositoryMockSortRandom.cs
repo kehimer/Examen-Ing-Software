@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domino.Logic;
-using Domino.Logic.Implement;
+using Domino.Logic.Interfaces;
+using Domino.Logic.Logic;
 using Domino.Test.Factories;
-using Rhino.Mocks.Constraints;
 
 namespace Domino.Test.Mocks
 {
-    public class WellRepositoryMockSortRandom : ITileRepository
+    public class WellRepositoryMockSortRandom : IStackRepository
     {
         private Stack<Tile> _pieces = new Stack<Tile>();
 
@@ -21,7 +17,7 @@ namespace Domino.Test.Mocks
             for (int contador = 1; contador <= 28; contador++)
             {
                 var newPiece = PieceFactory.CreatePiece(face1, face2);
-                _pieces.Push(newPiece);
+                _pieces.Push((Tile)newPiece);
 
                 face2++;
                 if (face2 > 6)
@@ -46,7 +42,7 @@ namespace Domino.Test.Mocks
             for (int contador = 1; contador <= 28; contador++)
             {
                 var newPiece = PieceFactory.CreatePiece(face1, face2);
-                pieces.Add(newPiece);
+                pieces.Add((Tile)newPiece);
 
                 face2++;
                 if (face2 > 6)

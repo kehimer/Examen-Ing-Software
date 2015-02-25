@@ -5,7 +5,7 @@ namespace Domino.Logic.Logic
 {
     public class DominoGame
     {
-        /*private readonly IDominoGameRepository _dominoRepository;
+        private readonly IDominoGameRepository _dominoRepository;
 
         public DominoGame(IDominoGameRepository dominoRepository, IStackRepository stackRepository)
         {
@@ -97,6 +97,6 @@ namespace Domino.Logic.Logic
         public void SaveGameStatistics()
         {
             _dominoRepository.SaveGameStatistics();
-        }*/
+        }
     }
 }

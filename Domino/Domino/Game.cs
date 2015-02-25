@@ -16,12 +16,13 @@ namespace Domino
             builder.RegisterType<DominoGameRepository>().As<IDominoGameRepository>();
             builder.RegisterType<PlayerRepository>().As<IPlayerRepository>();
             builder.RegisterType<StackRepository>().As<IStackRepository>();
+            builder.RegisterType<DrawnGame>().As<IDrawnGame>();
             var container = builder.Build();
 
             using (var scope = container.BeginLifetimeScope())
             {
                 var app = scope.Resolve<IDrawnGame>();
-                app.Render();
+                app.Render(); 
             }
            // _drawnGame.Render();
         }

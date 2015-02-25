@@ -5,7 +5,7 @@ namespace Domino.Logic.Logic
 {
     public class DominoStack
     {
-       /* private readonly IStackRepository _stackRepository;
+       private readonly IStackRepository _stackRepository;
         private Stack<Tile> _tilesStack;
 
         public DominoStack(IStackRepository stackRepository)
@@ -23,6 +23,6 @@ namespace Domino.Logic.Logic
         {
             _stackRepository.SetRandomOrder(seed);
             _tilesStack = _stackRepository.GetTiles();
-        }*/
+        }
     }
 }

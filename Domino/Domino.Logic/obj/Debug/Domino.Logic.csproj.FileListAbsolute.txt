@@ -9,6 +9,5 @@ D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
 D:\UNITEC\Analisi Sistemas II\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Logic\bin\Debug\Domino.Logic.dll
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Logic\bin\Debug\Domino.Logic.pdb
-C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Logic\obj\Debug\Domino.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Logic\obj\Debug\Domino.Logic.dll
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Logic\obj\Debug\Domino.Logic.pdb

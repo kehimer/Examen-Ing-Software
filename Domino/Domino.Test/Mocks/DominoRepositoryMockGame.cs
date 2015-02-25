@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Domino.Logic.Implement;
+using Domino.Logic.Interfaces;
+using Domino.Logic.Logic;
 
 namespace Domino.Test.Mocks
 {
@@ -16,7 +17,9 @@ namespace Domino.Test.Mocks
         private const int CantPiecesByPlayer = 7;
 
         private int _currentPlayerTurn = 1;
-        
+
+        public IStackRepository StackRepository { get; set; }
+
         public void SetPlayerTile(int players)
         {
             var wellPieces = TileRepository.GetTiles();
@@ -26,7 +29,8 @@ namespace Domino.Test.Mocks
                 var newPlayer = new Player();
                 for (int i = 0; i < CantPiecesByPlayer; i++)
                 {
-                    newPlayer.AddTile(wellPieces.Pop());
+                    var tile = (Tile)wellPieces.Pop();
+                    newPlayer.AddTile(tile);
                 }
                 newPlayer.SetNumber(contador);
                 _players.Add(newPlayer);
@@ -40,6 +44,11 @@ namespace Domino.Test.Mocks
                 throw new Exception(string.Format("El jugador {0} no existe", playerNumber));
 
             return player.GetTiles();
+        }
+
+        public List<Tile> GetCurrentTableStack()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Player> GetPlayers()
@@ -89,6 +98,16 @@ namespace Domino.Test.Mocks
             return tempPlayer.GetNumber() == -1 ? null : tempPlayer;
         }
 
+        public Tile GetTileWithMaxSum(int playerNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Tile GetTile(int playerNumber, int side1, int side2)
+        {
+            throw new NotImplementedException();
+        }
+
         public Player GetPlayerWithMaxSumTile()
         {
             var maxValue = _players.Max(x => x.GetTiles().Sum(p => p.SideOne + p.SideTwo));
@@ -127,13 +146,23 @@ namespace Domino.Test.Mocks
             _currentPlayerTurn = numberPlayer;
         }
 
+        public int GetNextTurnPlayer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetCurrentTurnPlayer()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TakeATileFromTheStack()
         {
             if (TileRepository.GetTiles().Count == 0)
                 throw new Exception("Ya no hay piezas en el pozo");
 
             var currentPlayer = GetPlayerCurrentTurn();
-            currentPlayer.AddTile(TileRepository.GetTiles().Pop());
+            currentPlayer.AddTile((Tile)TileRepository.GetTiles().Pop());
         }
 
         public int GetWinnerPlayer()

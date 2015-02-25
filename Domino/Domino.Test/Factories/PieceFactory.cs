@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domino.Logic;
-using Domino.Logic.Implement;
+﻿using Domino.Logic.Logic;
 
 namespace Domino.Test.Factories
 {
