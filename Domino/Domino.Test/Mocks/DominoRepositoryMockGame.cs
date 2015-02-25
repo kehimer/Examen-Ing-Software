@@ -12,7 +12,6 @@ namespace Domino.Test.Mocks
         private List<Player> _players = new List<Player>();
         private List<Tile> _pieces =  new List<Tile>();
         private List<Tile> _piecesTable = new List<Tile>();
-        public ITileRepository TileRepository { get; set; }
         
         private const int CantPiecesByPlayer = 7;
 
@@ -22,7 +21,7 @@ namespace Domino.Test.Mocks
 
         public void SetPlayerTile(int players)
         {
-            var wellPieces = TileRepository.GetTiles();
+            var wellPieces = StackRepository.GetTiles();
 
             for (int contador = 1; contador <= players; contador++)
             {
@@ -158,11 +157,11 @@ namespace Domino.Test.Mocks
 
         public void TakeATileFromTheStack()
         {
-            if (TileRepository.GetTiles().Count == 0)
+            if (StackRepository.GetTiles().Count == 0)
                 throw new Exception("Ya no hay piezas en el pozo");
 
             var currentPlayer = GetPlayerCurrentTurn();
-            currentPlayer.AddTile((Tile)TileRepository.GetTiles().Pop());
+            currentPlayer.AddTile(StackRepository.GetTiles().Pop());
         }
 
         public int GetWinnerPlayer()

@@ -42,7 +42,6 @@
     <Compile Include="Implements\DominoGameRepository.cs" />
     <Compile Include="Implements\PlayerRepository.cs" />
     <Compile Include="Implements\StackRepository.cs" />
-    <Compile Include="Interfaces\ITileRepository.cs" />
     <Compile Include="Logic\DominoGame.cs" />
     <Compile Include="Logic\DominoStack.cs" />
     <Compile Include="Logic\Player.cs" />
