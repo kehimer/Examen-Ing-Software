@@ -11,3 +11,4 @@ C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\bin\Debug\TechTalk.SpecFlow.dll
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\obj\Debug\Domino.Spec.dll
 C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\obj\Debug\Domino.Spec.pdb
+C:\Users\Josselyn\Documents\SourceTreeRepositories\Ing. Soft\Domino\Domino.Spec\obj\Debug\Domino.Spec.csprojResolveAssemblyReference.cache

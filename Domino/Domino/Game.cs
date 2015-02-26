@@ -22,9 +22,9 @@ namespace Domino
             using (var scope = container.BeginLifetimeScope())
             {
                 var app = scope.Resolve<IDrawnGame>();
+                
                 app.Render(); 
             }
-           // _drawnGame.Render();
         }
     }
 }

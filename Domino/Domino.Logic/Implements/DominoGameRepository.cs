@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Autofac;
 using Domino.Logic.Interfaces;
 using Domino.Logic.Logic;
 
@@ -11,11 +12,12 @@ namespace Domino.Logic.Implements
     {
         private readonly List<Player> _players = new List<Player>();
         private readonly List<Tile> _tableTiles = new List<Tile>();
-        public IStackRepository StackRepository { get; set; }
 
         private const int TilesAmountByPlayer = 7;
 
         private int _currentPlayerTurn = 1;
+
+        public IStackRepository StackRepository { get; set; }
 
         public void SetPlayerTile(int players)
         {

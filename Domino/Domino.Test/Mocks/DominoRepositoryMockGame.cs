@@ -9,9 +9,8 @@ namespace Domino.Test.Mocks
 {
     public class DominoRepositoryMockGame : IDominoGameRepository
     {
-        private List<Player> _players = new List<Player>();
-        private List<Tile> _pieces =  new List<Tile>();
-        private List<Tile> _piecesTable = new List<Tile>();
+        private readonly List<Player> _players = new List<Player>();
+        private readonly List<Tile> _piecesTable = new List<Tile>();
         
         private const int CantPiecesByPlayer = 7;
 
@@ -23,10 +22,10 @@ namespace Domino.Test.Mocks
         {
             var wellPieces = StackRepository.GetTiles();
 
-            for (int contador = 1; contador <= players; contador++)
+            for (var contador = 1; contador <= players; contador++)
             {
                 var newPlayer = new Player();
-                for (int i = 0; i < CantPiecesByPlayer; i++)
+                for (var i = 0; i < CantPiecesByPlayer; i++)
                 {
                     var tile = (Tile)wellPieces.Pop();
                     newPlayer.AddTile(tile);
@@ -67,7 +66,7 @@ namespace Domino.Test.Mocks
         public Tile GetDoubleGreaterTile(int playerNumber)
         {
             var player = GetPlayer(playerNumber);
-            for (int i = 6; i >= 0; i--)
+            for (var i = 6; i >= 0; i--)
             {
                 if (player.HasThisTile(i, i))
                     return player.GetTile(i, i);

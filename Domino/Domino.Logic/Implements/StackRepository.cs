@@ -27,6 +27,20 @@ namespace Domino.Logic.Implements
                 side1++;
                 side2 = 0;
             }
+           // List<Tile> initialTiles = new List<Tile>();
+
+           /* const int maxValue = 6;
+            for (int headValue = 0; headValue <= maxValue; headValue++)
+            {
+                for (int tailValue = headValue; tailValue <= maxValue; tailValue++)
+                {
+                    var currentTile = new Tile { SideOne = headValue, SideTwo = tailValue };
+                    _tiles.Push(currentTile);
+                }
+            }*/
+           // _tiles = initialTiles;
+
+           // return initialTiles;
         }
 
         public Stack<Tile> GetTiles()
@@ -65,6 +79,29 @@ namespace Domino.Logic.Implements
             }
             _tiles.Clear();
             _tiles = randomTiles;
+
+            /*for (int i = 0; i < seed; i++)
+            {
+                SwapTilesRandomly();
+            }*/
         }
+
+       /* public void Shuffle(int swapsAmount)
+        {
+            for (int i = 0; i < swapsAmount; i++)
+            {
+                SwapTilesRandomly();
+            }
+        }*/
+
+       /* private void SwapTilesRandomly()
+        {
+            int posTile1 = _random.GetRandomPosition();
+            int posTile2 = _random.GetRandomPosition();
+
+            var temp = _tiles[posTile1];
+            Tiles[posTile1] = Tiles[posTile2];
+            Tiles[posTile2] = temp;
+        */
     }
 }

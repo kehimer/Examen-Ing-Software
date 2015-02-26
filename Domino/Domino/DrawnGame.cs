@@ -10,20 +10,20 @@ namespace Domino
     class DrawnGame : IDrawnGame
     {
         private readonly IDominoGameRepository _dominoGame;
-        private IPlayerRepository _playerRepository;
-        private readonly IStackRepository _stackRepository;
+        //private IPlayerRepository _playerRepository;
+       // private readonly IStackRepository _stackRepository;
 
         public DrawnGame(IDominoGameRepository dominoGame, IPlayerRepository playerRepository, IStackRepository stackRepository)
         {
             _dominoGame = dominoGame;
-            _playerRepository = playerRepository;
-            _stackRepository = stackRepository;
+            _dominoGame.StackRepository = stackRepository;
+           // _stackRepository = stackRepository;
         }
 
         public void InitGame()
         {
-            _stackRepository.SetInitialTiles();
-            _stackRepository.SetRandomOrder(6);
+            _dominoGame.StackRepository.SetInitialTiles();
+            _dominoGame.StackRepository.SetRandomOrder(6);
             _dominoGame.SetPlayerTile(1);
             _dominoGame.SetPlayerTile(2);
             var firstPlayer = _dominoGame.GetPlayerWithDoubleGreaterTile();
@@ -39,6 +39,7 @@ namespace Domino
                 Console.WriteLine("Comienza el jugador numero " + firstPlayer.GetNumber());
                 greaterTile = _dominoGame.GetTileWithMaxSum(firstPlayer.GetNumber());
             }
+            _dominoGame.SetPlayerTurn(firstPlayer.GetNumber());
             _dominoGame.SetTileAtTheBeginingOfTheStack(greaterTile);
             PrintStack(_dominoGame.GetCurrentTableStack());
         }
